@@ -1,0 +1,40 @@
+/**dispensary inventory:
+eighths (25)
+quarters (30)
+carts (40)
+edibles (20)
+bath salt (50)
+concentrate (70)
+prerolls (35)
+papers (50)
+bongs (20)
+lighters (100)
+grinder (20)
+butane (10)
+torch (12)
+dab mat (10)
+kief (10)
+**/
+Create a dispensary database
+CREATE TABLE dispensary (id INTEGER PRIMARY KEY, item TEXT, price_usd INTEGER, inventory INTEGER, discount_day TEXT);
+INSERT INTO dispensary VALUES (1, "eighths", 20,25,"monday");
+INSERT INTO dispensary VALUES (2, "quarters", 40,30, "tuesday");
+INSERT INTO dispensary VALUES (3, "carts", 40, 80, "wednesday");
+INSERT INTO dispensary VALUES (4, "edible", 30,20, "tuesday");
+INSERT INTO dispensary VALUES (5, "bath salt", 20, 50, "thursday");
+INSERT INTO dispensary VALUES (6, "concentrate", 80, 70, "friday" );
+INSERT INTO dispensary VALUES (7, "prerolls", 10, 35, "saturday");
+INSERT INTO dispensary VALUES (8, "papers", 5,50, "sunday");
+INSERT INTO dispensary VALUES (9, "bongs",50, 20, "sunday");
+INSERT INTO dispensary VALUES (10, "lighters", 5, 100, "monday");
+INSERT INTO dispensary VALUES (11, "grinders", 20, 20, "wednesday");
+INSERT INTO dispensary VALUES (12, "butane" ,10 , 10, "wednesday");
+INSERT INTO dispensary VALUES (13, "torch", 25, 12, "sunday");
+INSERT INTO dispensary VALUES (14, "dab mat", 10, 10, "saturday");
+INSERT INTO dispensary VALUES (15, "kief", 30,10, "thursday");
+
+display inventory ordered by price 
+SELECT * FROM dispensary ORDER BY price_usd;
+
+display all inventory less than $20
+SELECT * FROM dispensary WHERE price_usd < 20;
